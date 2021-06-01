@@ -1,7 +1,13 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 
+import styled from "@emotion/styled";
+
 function App() {
+  const Text = styled.div`
+    color: red;
+  `;
+
   const [search, setSearch] = useState("");
   const [result, setResult] = useState([]);
   const [filtered, setFiltered] = useState([]);
@@ -22,8 +28,8 @@ function App() {
       <div>Search</div>
       <input type="text" onChange={(text) => setSearch(text.target.value)} />
       {filtered.map((name, index) => (
-        <div key={index} style={{ color: "red" }}>
-          {name}
+        <div key={index}>
+          <Text>{name}</Text>
         </div>
       ))}
     </div>
