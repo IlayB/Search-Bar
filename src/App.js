@@ -21,7 +21,7 @@ function App() {
       <div>Search</div>
       <input type="text" onChange={(text) => setSearch(text.target.value)} />
       {Object.values(result).map(function (name) {
-        return <div>{name}</div>;
+        return <div style={{ color: "red" }}>{name}</div>;
       })}
     </div>
   );
